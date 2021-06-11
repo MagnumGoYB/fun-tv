@@ -1,7 +1,12 @@
 {
   "name": "fun-tv",
   "version": "0.0.0",
-  "description": "",
+  "description": "一个有趣的 Top20 电影榜单",
+  "keywords": [
+    "top20",
+    "movie",
+    "list"
+  ],
   "homepage": "https://github.com/MagnumGoYB/fun-tv#readme",
   "bugs": {
     "url": "https://github.com/MagnumGoYB/fun-tv/issues"
