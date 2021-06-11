@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="MagnumGoYB (sosbs@outlook.com)" />
+    <title>Fun TV</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script>
+      document.documentElement.className = 'js'
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement('style')
+        return (
+          (t.innerHTML = 'root: { --tmp-var: bold; }'),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports('font-weight', 'var(--tmp-var)')
+          )),
+          t.parentNode.removeChild(t),
+          e
+        )
+      }
+      supportsCssVars() ||
+        alert(
+          'Please view this demo in a modern browser that supports CSS Variables.'
+        )
+    </script>
+  </head>
+  <body>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
