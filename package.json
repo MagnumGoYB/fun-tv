@@ -18,6 +18,8 @@
   "license": "MIT",
   "author": "MagnumGoYB (sosbs@outlook.com)",
   "scripts": {
+    "start": "parcel src/index.html --open",
+    "clean": "rm -rf dist/*",
     "prepare": "husky install",
     "sort": "sort-package-json",
     "prettier": "prettier -c --write '**/*'"
