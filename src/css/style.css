@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 13px;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  --color-text: #fff;
+  --color-bg: #000;
+  --color-link: #fff;
+  --color-link-hover: #ff0000;
+  --color-menu: #fff;
+  --color-menu-hover: #ff0000;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-family: paralucent, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --title-size-fallback: 7vw;
+  --title-size: clamp(4rem, 7vw, 10rem);
+  --cursor-stroke: none;
+  --cursor-fill: #ff0000;
+  --cursor-stroke-width: 1px;
+}
+
+.cursor {
+  display: none;
+}
+
+@media (any-pointer: fine) {
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    pointer-events: none;
+    mix-blend-mode: difference;
+  }
+
+  .cursor__inner {
+    fill: var(--cursor-fill);
+    stroke: var(--cursor-stroke);
+    stroke-width: var(--cursor-stroke-width);
+  }
+
+  .no-js .cursor {
+    display: none;
+  }
+}
