@@ -15,8 +15,7 @@ export default class Cursor {
     this.renderedStyles = {
       tx: { previous: 0, current: 0, amt: 0.2 },
       ty: { previous: 0, current: 0, amt: 0.2 },
-      scale: { previous: 1, current: 1, amt: 0.15 },
-      opacity: { previous: 1, current: 1, amt: 0.1 }
+      scale: { previous: 1, current: 1, amt: 0.15 }
     }
 
     this.onMouseMoveEv = () => {
@@ -37,12 +36,10 @@ export default class Cursor {
 
   enter() {
     this.renderedStyles.scale.current = 2.5
-    this.renderedStyles.opacity.current = 0.5
   }
 
   leave() {
     this.renderedStyles.scale.current = 1
-    this.renderedStyles.opacity.current = 1
   }
 
   render() {
@@ -58,7 +55,6 @@ export default class Cursor {
     }
 
     this.DOM.el.style.transform = `translateX(${this.renderedStyles.tx.previous}px) translateY(${this.renderedStyles.ty.previous}px) scale(${this.renderedStyles.scale.previous})`
-    this.DOM.el.style.opacity = this.renderedStyles.opacity.previous
 
     requestAnimationFrame(() => this.render())
   }
