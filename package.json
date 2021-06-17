@@ -22,7 +22,9 @@
     "clean": "rm -rf dist/*",
     "prepare": "husky install",
     "sort": "sort-package-json",
-    "prettier": "prettier -c --write '**/*'"
+    "prettier": "prettier -c --write '**/*'",
+    "build:parcel": "parcel build src/index.html --no-content-hash --no-minify --no-source-maps --public-url ./",
+    "build": "npm run clean && npm run build:parcel"
   },
   "dependencies": {
     "gsap": "^3.6.1",
