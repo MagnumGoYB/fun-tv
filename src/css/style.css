@@ -448,6 +448,7 @@ main {
     display: block;
     pointer-events: none;
     mix-blend-mode: difference;
+    z-index: 10;
   }
 
   .cursor-inner {
