@@ -1,3 +1,5 @@
+import imagesLoaded from 'imagesLoaded'
+
 // Linear interpolation
 const lerp = (a, b, n) => (1 - n) * a + n * b
 
@@ -112,4 +114,11 @@ const scrollIt = (destination, duration = 200, easing = 'linear', callback) => {
   scroll()
 }
 
-export { lerp, getMousePos, calcWinsize, scrollIt }
+// Preload images
+const preloadImages = (selector = 'img') => {
+  return new Promise((resolve) => {
+    imagesLoaded(document.querySelectorAll(selector), resolve)
+  })
+}
+
+export { lerp, getMousePos, calcWinsize, scrollIt, preloadImages }
