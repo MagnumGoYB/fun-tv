@@ -2,6 +2,8 @@
 
 > 一个有趣的 Top20 电影榜单
 
+- [Website](https://magnumgoyb.github.io/fun-tv/)
+
 ## 本地开发
 
 克隆项目到本地：
