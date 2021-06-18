@@ -1,5 +1,5 @@
 import { gsap } from 'gsap'
-// import ContentPage from './contentPage'
+import ContentPage from './content-page'
 
 export default class MenuItem {
   constructor(el, galleryEl, contentEl) {
@@ -8,7 +8,6 @@ export default class MenuItem {
       gallery: galleryEl,
       content: contentEl
     }
-    console.log(this.DOM.gallery)
     this.DOM.title = this.DOM.el.querySelector('.menu-item-title')
     this.DOM.deco = this.DOM.el.querySelector('.menu-item-deco')
     this.DOM.cta = this.DOM.el.querySelector('.menu-item-cta')
@@ -16,7 +15,8 @@ export default class MenuItem {
     this.DOM.galleryItems = [
       ...this.DOM.gallery.querySelectorAll('.bg-gallery-item')
     ]
-    // this.contentPage = new ContentPage(this.DOM.content)
+
+    this.contentPage = new ContentPage(this.DOM.content)
 
     this.isCurrent = false
   }
