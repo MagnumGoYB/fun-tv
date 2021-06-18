@@ -82,7 +82,7 @@ a:focus {
 .js .loading::after {
   content: '';
   position: fixed;
-  z-index: 1000;
+  z-index: 5;
 }
 
 .js .loading::before {
@@ -98,23 +98,28 @@ a:focus {
   font-size: 10vw;
   top: 50%;
   left: 50%;
-  width: 1ch;
+  width: 1.2ch;
+  letter-spacing: 1ch;
   overflow: hidden;
-  font-family: 'mono45-headline', monospace;
-  font-weight: 700;
+  font-family: monospace;
+  font-weight: 100;
   transform: translate3d(-50%, -50%, 0);
-  -webkit-text-stroke: 3px var(--color-menu-hover);
-  text-stroke: 3px var(--color-menu-hover);
+  -webkit-text-stroke: 3px var(--color-link);
+  text-stroke: 3px var(--color-link);
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
   color: transparent;
-  color: var(--color-menu-hover);
+  color: var(--color-link);
   animation: letterSwitch 2s steps(7) infinite;
+}
+
+.js .loading .github-corner > svg {
+  z-index: 6;
 }
 
 @keyframes letterSwitch {
   to {
-    text-indent: -7ch;
+    text-indent: -13.9ch;
   }
 }
 
@@ -499,3 +504,5 @@ main {
     display: none;
   }
 }
+
+/*# sourceMappingURL=/style.78032849.css.map */
