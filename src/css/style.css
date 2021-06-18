@@ -352,7 +352,8 @@ main {
 
 .content-back:hover svg,
 .content-back:focus svg {
-  fill: transparent;
+  stroke: #ff0000;
+  fill: #ff0000;
 }
 
 .content-title {
@@ -395,6 +396,10 @@ main {
   color: #cacaca;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-figure-caption:hover {
+  color: #fff;
 }
 
 .js .content-back,
